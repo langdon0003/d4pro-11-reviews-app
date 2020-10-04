@@ -1,0 +1,13 @@
+
+body {
+  font-family: 'Metropolis', sans-serif;
+}
+
+h1 {
+  color : red;
+}
+
+.bookcover {
+  height: 300px;
+  width: auto;
+}
