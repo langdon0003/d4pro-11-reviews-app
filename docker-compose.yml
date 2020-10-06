@@ -3,6 +3,9 @@ services:
   web:
     build: .
     command: python /code/manage.py runserver 0.0.0.0:8000
+    environment:
+      - SECRET_KEY=eq$$u*@pd%s98)fqhmo4i57^t$$%&oo=nf6#7=10526lhz33h!9j
+      - DEBUG=True
     volumes:
       - .:/code
     ports:
@@ -12,7 +15,7 @@ services:
   db:
     image: postgres:13
     volumes:
-      - postgres_data:/var/postgresql/data
+      - postgres_data:/var/lib/postgresql/data
     environment:
       - 'POSTGRES_HOST_AUTH_METHOD=trust'
 volumes:
