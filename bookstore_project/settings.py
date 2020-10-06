@@ -124,7 +124,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Ho_Chi_Minh'
 
 USE_I18N = True
 
@@ -160,7 +160,15 @@ AUTHENTICATION_BACKENDS = (
     'allauth.account.auth_backends.AuthenticationBackend',
 )
 
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+DEFAULT_FROM_EMAIL = 'long@hallonen.com' 
+EMAIL_HOST = 'smtp.sendgrid.net' 
+EMAIL_HOST_USER = 'apikey'
+EMAIL_HOST_PASSWORD = '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' 
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+
+
 
 ACCOUNT_SESSION_REMEMBER = True
 ACCOUNT_SIGNUP_PASSWORD_ENTER_TWICE = False
@@ -181,3 +189,4 @@ SOCIALACCOUNT_PROVIDERS = {
         }
     }
 }
+

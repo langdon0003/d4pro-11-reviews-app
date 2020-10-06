@@ -1,0 +1,7 @@
+{% load i18n %}
+
+{% autoescape off %}
+
+{% blocktrans %}Confirm Your Sign Up - Please Confirm Your E-mail Address{% endblocktrans %}
+
+{% endautoescape %}
